@@ -1,6 +1,9 @@
-import localFont from "next/font/local";
+import {Inter} from "next/font/google";
 import "./globals.css";
+import Navbar from "../components/navbar/Navbar"
+import Footer from "../components/footer/page"
 
+const inter = Inter({subsets: ["latin"]})
 
 export const metadata = {
   title: "Create Next Blog",
@@ -9,11 +12,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="min-h-screen">
       <body
-        className=""
+        className={`${inter.className} flex flex-col min-h-screen`}
       >
-        {children}
+        <div className="container">        
+          <Navbar/>
+          <main className="flex-1 py-6">
+            {children}
+          </main>
+          <Footer/>
+      </div>
       </body>
     </html>
   );
