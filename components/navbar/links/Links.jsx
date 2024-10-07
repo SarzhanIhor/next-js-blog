@@ -3,7 +3,7 @@
 import styles from './links.module.css'
 import { useState } from 'react'
 import Image from 'next/image'
-import navLink from './navLink/navLink'
+import Navlink from './navLink/NavLink'
 
 const Links = () => {
     const links = [
@@ -31,7 +31,8 @@ const Links = () => {
         <div className={styles.links}>
             {
                 links.map(link => (
-                    <navLink key={link.title} item={link}/>
+                    // <NavLink key={link.title} item={link}/>
+                    <Navlink key={link.title} item={link}/>
                 ))
             }
         </div>

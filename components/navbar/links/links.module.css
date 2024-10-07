@@ -1,0 +1,6 @@
+.links{
+   display: flex;
+   gap: 20px; 
+   text-transform: capitalize;
+   font-size: 20px;
+}
